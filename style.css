@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+  background-color: lightgrey;
+}
+.container {
+  background-color: darkgoldenrod;
+  width: 100vw;
+}
+h1 {
+  text-align: center;
+  color: aliceblue;
+  font-size: 4.5rem;
+}
+
+#add-btn {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  align-items: flex-end;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: brown;
+  float: right;
+  margin-right: 30rem;
+}
