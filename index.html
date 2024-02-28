@@ -8,12 +8,28 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <div class="head">
-        <h1>My Library</h1>
-        <button id="add-btn">Add Book</button>
-      </div>
-      <ul class="booklist"></ul>
-    </div>
+    <header>
+      <h1>My Library</h1>
+      <form action="">
+        <fieldset>
+          <label for="title"
+            ><span>Book Name:</span>
+            <input type="text" id="title" name="title" required
+          /></label>
+          <label for="author">
+            <span>Author:</span>
+            <input type="text" id="author" name="author" required />
+          </label>
+          <label for="pages">
+            <span>Pages:</span>
+            <input type="nunmber" id="pages" name="pages" />
+          </label>
+          <label for="read">
+            <span>isRead:</span>
+            <input type="checkbox" id="read" name="read" />
+          </label>
+        </fieldset>
+      </form>
+    </header>
   </body>
 </html>

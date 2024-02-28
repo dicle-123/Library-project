@@ -1,29 +1,48 @@
-body {
-  display: flex;
-  justify-content: center;
-
-  height: 100vh;
-  width: 100vw;
-  background-color: lightgrey;
+* {
+  box-sizing: border-box;
 }
-.container {
-  background-color: darkgoldenrod;
-  width: 100vw;
+body {
+  background-color: coral;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
 }
 h1 {
   text-align: center;
   color: aliceblue;
   font-size: 4.5rem;
 }
+fieldset {
+  min-width: 340px;
+  max-width: 400px;
+  margin: 1px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+  background-color: #f0a6ca;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+  margin: 1px auto;
+  justify-content: center;
+  align-items: center;
+}
 
-#add-btn {
-  padding: 1rem 3rem;
-  border: none;
-  border-radius: 5px;
-  align-items: flex-end;
-  color: #fff;
-  font-size: 1.2rem;
-  background-color: brown;
-  float: right;
-  margin-right: 30rem;
+label {
+  display: flex;
+  width: 100%;
+  margin: 1px auto;
+  justify-content: center;
+}
+span {
+  font-size: 1.09rem;
+  display: inline-block;
+  width: 30%;
 }
