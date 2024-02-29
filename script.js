@@ -20,9 +20,16 @@ class Library {
   displayBook() {
     container.innerHTML = "";
     data.forEach((book) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
       if (this.name && this.author && this.pages) {
-        container.innerHTML += `Book name:${book.name}, Author:${book.author}, Pages:${book.pages}, Read:${book.read}`;
+        card.innerHTML = `
+        <p>Book name:${book.name}</p>
+        <p>Author:${book.author}</p>
+        <p>Pages:${book.pages}</p>
+        <p>isRead:${book.read ? "Yes" : "No"} </p>`;
       }
+      container.appendChild(card);
     });
   }
 }
@@ -42,4 +49,9 @@ addBtn.addEventListener("click", function () {
     readInput.value
   );
   book.addBook();
+
+  nameInput.value = "";
+  authorInput.value = "";
+  pagesInput.value = "";
+  readInput.value = "";
 });

@@ -85,3 +85,13 @@ input {
 label {
   display: block;
 }
+
+.card {
+  background-color: cadetblue;
+  max-width: 400px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
