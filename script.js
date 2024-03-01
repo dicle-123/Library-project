@@ -36,17 +36,25 @@ function displayBook() {
         : null
     }</button>
     `;
+    container.appendChild(card);
   });
+}
+function updateDataBase() {
+  localStorage.setItem("boooks", JSON.stringify(myLibrary));
+}
+
+function getData() {
+  return JSON.parse(localStorage.getItem("books"));
 }
 
 function addBook() {
-  data.push({
+  myLibrary.push({
     name: this.name,
     author: this.author,
     pages: this.pages,
     read: this.read,
   });
-  this.displayBook();
+  displayBook();
 }
 
 addBtn.addEventListener("click", function () {
