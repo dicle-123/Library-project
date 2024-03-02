@@ -27,7 +27,7 @@ function displayBook() {
     <p>Author:${book.author}</p>
     <p>Pages:${book.pages}</p>
     <p>Read:${book.read}</p>
-    <button data-index=${index}class="remove-book">Remove</button>
+    <button data-index=${index} class="remove-book">Remove</button>
    <button data-index=${index} class="toggle-btn">${
       book.read === "yes"
         ? "Marked Unread"
@@ -40,7 +40,7 @@ function displayBook() {
   });
 }
 function updateDataBase() {
-  localStorage.setItem("boooks", JSON.stringify(myLibrary));
+  localStorage.setItem("books", JSON.stringify(myLibrary));
 }
 
 function getData() {
@@ -48,25 +48,49 @@ function getData() {
 }
 
 function addBook() {
-  myLibrary.push({
-    name: this.name,
-    author: this.author,
-    pages: this.pages,
-    read: this.read,
-  });
-  displayBook();
+  if (
+    nameInput.value &&
+    !myLibrary.some((book) => book.name === nameInput.value)
+  ) {
+    const newBook = new Library(
+      nameInput.value,
+      authorInput.value,
+      pagesInput.value,
+      readInput.value
+    );
+    myLibrary.push(newBook);
+    updateDataBase();
+
+    displayBook();
+    nameInput.value = "";
+    authorInput.value = "";
+    pagesInput.value = "";
+    readInput.value = "";
+  }
 }
 
-addBtn.addEventListener("click", function () {
-  const book = new Library(
-    nameInput.value,
-    authorInput.value,
-    pagesInput.value,
-    readInput.value
-  );
-  book.addBook();
-  nameInput.value = "";
-  authorInput.value = "";
-  pagesInput.value = "";
-  readInput.value = "";
-});
+addBtn.addEventListener("click", addBook);
+
+function removeBook(e) {
+  if (e.target.classList.contains("remove-book")) {
+    const index = e.target.getAttribute("data-index");
+    myLibrary.splice(index, 1);
+    updateDataBase();
+    displayBook();
+  }
+}
+
+container.addEventListener("click", removeBook);
+
+function updateRead(e) {
+  if (e.target.classList.contains("toggle-btn")) {
+    const index = e.target.getAttribute("data-index");
+    myLibrary[index].read = myLibrary[index].read === "yes" ? "no" : "yes";
+    updateDataBase();
+    displayBook();
+  }
+}
+
+container.addEventListener("click", updateRead);
+
+displayBook();
