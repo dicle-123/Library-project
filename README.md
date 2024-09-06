@@ -24,8 +24,8 @@
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/my-library.git
-   ```
+   git clone https://github.com/dicle-123/Library-project.git
+
 
 Usage
 1.Add a New Book
@@ -61,3 +61,7 @@ style.css: Contains all the styles for the application, ensuring a responsive an
 script.js: Handles the functionality of the app, including adding, removing, and updating books.
 
 README.md: Documentation for the project.
+
+
+Demo
+Your site is live at https://dicle-123.github.io/Library-project/
