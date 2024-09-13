@@ -27,41 +27,26 @@
    git clone https://github.com/dicle-123/Library-project.git
 
 
-Usage
-1.Add a New Book
+# Usage
+## Add a New Book
 
 Click the "Add A New Book" button.
 Fill in the book's title, author, number of pages, and read status.
 Submit the form to add the book to your library.
 
-2.View Your Books
+## View Your Books
 
 All added books will appear as cards in the container below the form.
 Each card displays the book's details and provides options to remove the book or toggle its read status.
 
-3.Remove a Book
+## Remove a Book
 
 Click the "Remove" button on the respective book card to delete it from your library.
 
-4.Toggle Read Status
+## Toggle Read Status
 
 Click the "Marked Read" or "Marked Unread" button on the book card to update its read status.
 
-Project Structure
 
-my-library/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-index.html: The main HTML file that structures the web application.
-
-style.css: Contains all the styles for the application, ensuring a responsive and visually appealing design.
-
-script.js: Handles the functionality of the app, including adding, removing, and updating books.
-
-README.md: Documentation for the project.
-
-
-Demo
+# Demo
 Your site is live at https://dicle-123.github.io/Library-project/
